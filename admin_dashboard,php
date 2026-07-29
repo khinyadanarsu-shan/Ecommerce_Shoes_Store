@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f9ff;
+      margin: 0;
+      padding: 0;
+      color: #2e3a59;
+    }
+
+    .sidebar {
+      background-color: #a2c5f5;
+      color: #2e3a59;
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar:hover {
+      width: 280px;
+    }
+
+    .sidebar:hover a {
+      width: 280px;
+    }
+
+    .sidebar h2 {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .sidebar a {
+      color: #2e3a59;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 20px 0;
+      display: block;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: #7aaae0;
+      color: #ffffff;
+    }
+
+
+    .content {
+      margin-left: 270px;
+      padding: 40px;
+      overflow-x: hidden;
+
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 10px 20px rgba(162, 197, 245, 0.2);
+      border-radius: 10px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+      background-color: #ffffff;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-header {
+      background-color: #d6eaff;
+      color: #2e3a59;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-body {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .card-body h1 {
+      font-size: 40px;
+      color: #2e3a59;
+      font-weight: 700;
+    }
+
+    .card-footer {
+      background-color: #eef6ff;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #a2c5f5;
+      color: #2e3a59;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    .badge.bg-success {
+      background-color: #88e0b4 !important;
+      color: #2b4f3b;
+    }
+
+    .badge.bg-warning {
+      background-color: #ffe9a7 !important;
+      color: #665c2c;
+    }
+
+    .badge.bg-danger {
+      background-color: #f293a2 !important;
+      color: #5e1f29;
+    }
+
+    /* Animations */
+    .fadeIn {
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+
+      .content {
+        margin-left: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar fadeIn">
+    <h2>Admin Dashboard</h2>
+    <a href="#">Dashboard</a>
+    <a href="manage_users.php">Manage Users</a>
+    <a href="#">Manage Products</a>
+  </div>
+
+  <!-- Content Area -->
+  <div class="content fadeIn">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h4>Active Users</h4>
+            </div>
+            <div class="card-body">
+              <h1>1,235</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h4>Total Products</h4>
+            </div>
+            <div class="card-body">
+              <h1>842</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h4>Total Orders</h4>
+            </div>
+            <div class="card-body">
+              <h1>568</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Orders Table -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4>Recent Orders</h4>
+            </div>
+            <div class="card-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Order ID</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>#12345</td>
+                    <td><span class="badge bg-success">Completed</span></td>
+                    <td>2025-04-25</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>#12346</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td>2025-04-24</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>#12347</td>
+                    <td><span class="badge bg-danger">Canceled</span></td>
+                    <td>2025-04-23</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>#12348</td>
+                    <td><span class="badge bg-success">Completed</span></td>
+                    <td>2025-04-22</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>#12349</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td>2025-04-21</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; Shoes Store| Admin Dashboard</p>
+  </div>
+
+  <!-- Optional: jQuery for smooth scroll and dynamic updates -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Optional Smooth Scroll for navigation (if desired)
+    $("a").on("click", function(e) {
+      if (this.hash !== "") {
+        e.preventDefault();
+        var hash = this.hash;
+        $("html, body").animate({
+            scrollTop: $(hash).offset().top,
+          },
+          800
+        );
+      }
+    });
+  </script>
+</body>
+
+</html>
