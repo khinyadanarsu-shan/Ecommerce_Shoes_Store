@@ -1,9 +1,24 @@
+
 # Ecommerce_Shoes_Store
 A full-stack shoes store web application developed using PHP and MySQL. The project features user registration and login, product browsing, shopping cart, checkout, and an admin dashboard for managing products and orders.
 
 Secure Shoes Store Website  
 ---------------------------
 This is a secure e-commerce website for a shoe store developed using PHP, MySQL, HTML, CSS, and JavaScript.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/19cbe1b1-8831-4528-8f8d-4345c85a9ffb" width="48%">
+  <img src="https://github.com/user-attachments/assets/6404979a-87a2-441d-8ec4-6cf6ff4e1068" width="48%">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/15373ee2-3fd2-4a80-98e2-884d65e9b624" width="48%">
+  <img src="https://github.com/user-attachments/assets/0948f0e2-3ca0-49be-b407-7833df6fe169" width="48%">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c07648f6-a955-443e-a596-24a74bb91ae3" width="48%">
+  <img src="https://github.com/user-attachments/assets/3196977f-630d-416d-b70c-6437fdeb75a3" width="48%">
+</p>
 
 FEATURES:
 -------------
